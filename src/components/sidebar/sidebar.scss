@@ -1,8 +1,7 @@
 .sidebar {
   display: flex; /* 要素を横並びにする */
-  flex: 0.35; /* sidebarで画面の35%使用する */
+  flex: 0.3; /* sidebarで画面の35%使用する */
   height: 100vh; /* Viewport Height 画面全体の高さを使う */
-  background-color: #33363d; // TODO 後でhomeに移動する
 
   .sidebarLeft {
     display: flex;
@@ -40,6 +39,7 @@
     background-color: #2b2b33;
     width: 300px;
     position: relative;
+    flex-grow: 1; // 余白を埋める
 
     .sidebarTop {
       color: white;

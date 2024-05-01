@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Sidebar from './components/sidebar/sidebar';
+import Chat from './components/chat/chat';
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       {/* sidebar */}
       <Sidebar />
 
-      {/* home */}
+      {/* chat */}
+      <Chat />
     </div>
   );
 }
