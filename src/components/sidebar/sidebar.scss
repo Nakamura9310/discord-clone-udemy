@@ -1,0 +1,114 @@
+.sidebar {
+  display: flex; /* 要素を横並びにする */
+  flex: 0.35; /* sidebarで画面の35%使用する */
+  height: 100vh; /* Viewport Height 画面全体の高さを使う */
+  background-color: #33363d; // TODO 後でhomeに移動する
+
+  .sidebarLeft {
+    display: flex;
+    flex-direction: column; /* sidebarLeft内の要素を縦にする */
+    align-items: center; /* 中央揃え */
+    background-color: #1a1c20;
+    padding: 7px 15px; // sidebarの枠と子要素との幅
+    .serverIcon {
+      background-color: #33363d;
+      width: 60px; // 少し大きく
+      height: 60px; // 少し大きく
+      border-radius: 9999px; /* 丸くする */
+      margin-bottom: 10px; /* アイコンの間を空ける */
+      position: relative; // 子要素absoluteに対する相対位置とするため
+      margin-top: 7px;
+      img {
+        width: 50px; // 親要素に対して50%幅
+
+        /*
+        親要素=グレー背景に対して位置がずれるのを防ぐ。
+        absoluteとセットで%指定して
+        要素をその自身の幅と高さの50%分だけ右下に移動する。
+        */
+        position: absolute; // 親に対する絶対位置
+        // 要素の左上隅を親要素の上端左端から50%の位置=中央に配置
+        top: 50%;
+        left: 50%;
+        // 要素をその自身の幅と高さの50%分だけ左方向と上方向に移動
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .sidebarRight {
+    background-color: #2b2b33;
+    width: 300px;
+    position: relative;
+
+    .sidebarTop {
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .sidebarChannels {
+      padding: 13px;
+
+      .sidebarChannelsHeader {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
+      }
+      .sidebarHeader {
+        display: flex;
+      }
+
+      .sidebarAddIcon {
+        cursor: pointer;
+      }
+    }
+
+    .sidebarFooter {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 93%;
+      padding-bottom: 10px;
+      border-top: 1px solid #686a6e;
+      padding-top: 10px;
+      margin-left: -3px;
+
+      .sidebarAccount {
+        display: flex;
+        align-items: center;
+        flex: grow 1;
+
+        img {
+          width: 60px;
+        }
+
+        .accountName {
+          margin-left: 5px;
+
+          h4 {
+            color: white;
+            // font-weight: 500;
+          }
+
+          span {
+            color: #686a6e;
+          }
+        }
+
+        .sidebarVoice {
+          display: flex;
+          align-items: center;
+          color: #686a6e;
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+}
