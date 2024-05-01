@@ -4,11 +4,13 @@ import Sidebar from './components/sidebar/sidebar';
 import Chat from './components/chat/chat';
 import { useSelector } from 'react-redux';
 import Login from './components/login/login';
+import { useAppSelector } from './app/hooks';
 
 function App() {
   // user情報によってログインページを表示する
-  // const user = useSelector((state) => state.user.user);
-  const user = null; // TODO 一旦nullにしている
+  const user = useAppSelector((state) => state.user);
+
+  console.log(user);
 
   return (
     <div className="App">
