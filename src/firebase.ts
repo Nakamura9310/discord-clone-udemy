@@ -10,6 +10,7 @@ import { GoogleAuthProvider, getAuth } from 'firebase/auth';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
+  // apiKeyは公開しても問題ない @see https://firebase.google.com/docs/web/setup?hl=ja
   apiKey: 'AIzaSyCxCf0jzKp3NsasNfux0T99Ge9s8k8neWM',
   authDomain: 'discord-clone-b28f6.firebaseapp.com',
   projectId: 'discord-clone-b28f6',

@@ -10,7 +10,7 @@ export const userSlice = createSlice({
   initialState: initialState, // InitialState型の変数宣言
   reducers: {
     login: (state, action) => {
-      state.user = action.payload; // login後にuserの状態が更新される
+      state.user = action.payload; // loginするとuserを更新する
     },
     logout: (state) => {
       state.user = null; // logoutでuserの状態をnullにする
@@ -20,4 +20,5 @@ export const userSlice = createSlice({
 
 console.log(userSlice);
 
+export const { login, logout } = userSlice.actions;
 export default userSlice.reducer;
